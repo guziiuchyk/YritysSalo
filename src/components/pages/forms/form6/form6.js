@@ -1,6 +1,8 @@
+import Header from "../../../general/header/header";
+
 const Form6 = (props) => {
     return (
-    <div>Form6</div>
+        <div><Header title='PEREHDYTYS'/></div>
     )
 }
 

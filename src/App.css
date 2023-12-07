@@ -106,3 +106,67 @@ a{
   font-size: 20px;
   font-weight: 600;
 }
+.header-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #98cc98;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.header-link.active{
+  background-color: #4d82aa;
+}
+.header__links{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.header__arrow__head{
+  flex-shrink: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 30px; /* Размеры стрелки (измените значения по вашему усмотрению) */
+  border-color: transparent transparent transparent #a19b9a; /* Цвет стрелки */
+}
+.header__arrow__body{
+  width: 100%;
+  height: 10px;
+  background-color: #a19b9a;
+}
+.header__arrow{
+  z-index: -1;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 48%;
+}
+.header-link__title{
+  font-size: 45px;
+  font-weight: 700;
+}
+.header{
+  margin: 40px 0;
+}
+.header__links__home, .header__links__result{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__links__home__img, .home__links__result__img{
+  width: 100%;
+  height: 100%;
+}

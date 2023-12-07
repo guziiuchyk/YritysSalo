@@ -1,6 +1,8 @@
+import Header from "../../../general/header/header";
+
 const Form5 = (props) => {
     return (
-    <div>Form 5</div>
+        <div><Header title='SOPIMUS'/></div>
     )
 }
 

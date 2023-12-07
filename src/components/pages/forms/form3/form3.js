@@ -1,6 +1,8 @@
+import Header from "../../../general/header/header";
+
 const Form3 = (props) => {
     return (
-    <div>Form 3</div>
+        <div><Header title='HAKEMUSTEN KÄSITTELY'/></div>
     )
 }
 
