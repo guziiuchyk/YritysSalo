@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "./components/pages/home/home";
@@ -9,6 +8,8 @@ import Form4 from "./components/pages/forms/form4/form4";
 import Form5 from "./components/pages/forms/form5/form5";
 import Form6 from "./components/pages/forms/form6/form6";
 import Result from "./components/pages/forms/result/result";
+import {Provider} from "react-redux";
+import store from './components/redux/store'
 
 const router = createBrowserRouter([
   {
@@ -47,7 +48,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
   );
 }
 

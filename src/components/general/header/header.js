@@ -4,7 +4,7 @@ import homeIcon from '../../../img/home-icon.png'
 import checkMarkIcon from '../../../img/check-mark.svg'
 const Header = ({title}) => {
   return (
-    <section children="header-section">
+    <section className="header-section">
       <div className="header__title">{title}</div>
       <div className="header">
           <div className="header__links">

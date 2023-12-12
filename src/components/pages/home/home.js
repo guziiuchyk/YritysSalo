@@ -1,7 +1,6 @@
 import {NavLink} from "react-router-dom";
-import ExclamationMark from "../../general/exclamationMark/exclamationMark";
-import QuestionMark from "../../general/questionMark/questionMark";
 import Footer from "../../general/footer/footer";
+import Explanation from "../../explanation/explanation";
 
 const Home = (props) => {
     return (
@@ -30,12 +29,7 @@ const Home = (props) => {
                 <NavLink to='/forms/5' className='home__links__link'>5</NavLink>
                 <NavLink to='/forms/6' className='home__links__link'>6</NavLink>
             </div>
-            <div className="home__explanation">
-                <ExclamationMark/><QuestionMark/>
-                <div className="home__explanation__text">
-                    Vinkki- ja ohjenappien löydät vinkejä ja neuvoja, joita voi lisätä tulostettavalle muistilistalo.
-                </div>
-            </div>
+            <Explanation/>
         </div>
         </div>
         </section>
