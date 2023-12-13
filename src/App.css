@@ -8,6 +8,15 @@ a{
   color: inherit;
   text-decoration: none;
 }
+button{
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
 .form__question-mark, .form__exclamation-mark{
   position: absolute;
   user-select: none;
@@ -328,8 +337,8 @@ a{
 }
 .check-box__radio-custom span{
   background-color: white;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
 }
 .check-box__radio:checked + .check-box__radio-custom{
@@ -339,4 +348,26 @@ a{
    font-size: 20px;
    font-weight: 500;
    color: #868686;
+}
+.copy{
+  margin: 20px 0 20px 10px;
+  position: relative;
+}
+.copy__button{
+  position: absolute;
+  left: -50px;
+  width: 30px;
+  height: 30px;
+  top: 0;
+}
+.copy__button:active{
+  top: 1px;
+}
+.copy__button__img{
+  width: 100%;
+  height: 100%;
+}
+.copy__text{
+  color: #868686;
+  font-size: 20px;
 }

@@ -5,6 +5,7 @@ import Input from "../formsComponents/input/input";
 import {useEffect, useRef, useState} from "react";
 import Explanation from "../../../explanation/explanation";
 import CheckBox from "../formsComponents/checkBox/checkBox";
+import CopyToClipboard from "../formsComponents/copyToClipboard/copyToClipboard";
 
 const Form1 = (props) => {
 
@@ -40,15 +41,15 @@ const Form1 = (props) => {
                 <CheckBox elements={[
                     {
                         name:'Esimerkki A',
-                        element: <div>BLOCK 1</div>
+                        element: <CopyToClipboard text={'Koska yrityksemme tarvitsee uusia asiakkaita, yksi ensivuoden on uudisasiakashankinta.'}/>
                     },
                     {
                         name:'Esimerkki B',
-                        element: <div>BLOCK 2</div>
+                        element: <CopyToClipboard text={'Koska nyt on joulusesonki, tarvitsemme jouluapulaista.'}/>
                     },
                     {
                         name:'Esimerkki C',
-                        element: <div>BLOCK 3</div>
+                        element: <CopyToClipboard text={'Tuotantomme on kasvussa.'}/>
                     },
                 ]}/>
                 <Buttons nextButton='/forms/2' prevButton='/'/>

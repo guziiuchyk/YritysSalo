@@ -9,7 +9,7 @@ import Form5 from "./components/pages/forms/form5/form5";
 import Form6 from "./components/pages/forms/form6/form6";
 import Result from "./components/pages/forms/result/result";
 import {Provider} from "react-redux";
-import store from './components/redux/store'
+import store from './redux/store'
 
 const router = createBrowserRouter([
   {
