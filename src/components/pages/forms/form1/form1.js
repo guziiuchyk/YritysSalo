@@ -7,11 +7,15 @@ import Explanation from "../../../explanation/explanation";
 import CheckBox from "../formsComponents/checkBox/checkBox";
 import CopyToClipboard from "../formsComponents/copyToClipboard/copyToClipboard";
 import {useDispatch, useSelector} from "react-redux";
-import {setLeftDistance, setRightDistance} from "../../../../redux/slices/globalSlice";
-import {setPurposeCompany, setRecruitmentPlan, setRequiredSkills} from "../../../../redux/slices/form1Slice";
+import {
+    setPurposeCompany,
+    setRecruitingBudget,
+    setRecruitmentPlan,
+    setRequiredSkills
+} from "../../../../redux/slices/form1Slice";
 import {getElementDistance} from "../../../../utils/getElementDistance";
 
-const Form1 = (props) => {
+const Form1 = () => {
 
     const formRef = useRef(null);
     const dispatch = useDispatch();
@@ -24,7 +28,7 @@ const Form1 = (props) => {
         return () => {
             window.removeEventListener('resize', ()=> getElementDistance(formRef, dispatch));
         };
-    }, []);
+    });
     return (
     <section className='form-section'>
         <Header title='OSAAMISEN TARVE'/>
@@ -57,7 +61,7 @@ const Form1 = (props) => {
                             'Vaihe 4: \nAikataulu: \nVastuuhenkilöt: \nHaastattelujen toinen kierros ja työntekijän valinta. \n\n' +
                             'Vaihe 5: \nAikataulu: \nVastuuhenkilöt: \nPerehdys.'}/>}
                 ]}/>
-                <Input value={recruitingBudget} questionMark={'Linkin takaa löydät palkkalaskurin, jolla pystyt arvioimaan palkkakuluja.\n\npalkkalaskuri\n\n Voit kopioida esimerkkivastauksen itsellesi.'} exclamationMark={'Vastavalmistunut tai vastaava on aluksi halvempi palkattava, tosin perehdytys vie alkuun siivun tuottavuudesta.\n\nKokenut osaaja taas voi tuoda yritykselle suurempia tuloja nopeammin, mutta on kalliimpi palkattava.'} title={'Arvioi budjetti rekrytoinille:'}/>
+                <Input reducer={setRecruitingBudget} value={recruitingBudget} questionMark={'Linkin takaa löydät palkkalaskurin, jolla pystyt arvioimaan palkkakuluja.\n\npalkkalaskuri\n\n Voit kopioida esimerkkivastauksen itsellesi.'} exclamationMark={'Vastavalmistunut tai vastaava on aluksi halvempi palkattava, tosin perehdytys vie alkuun siivun tuottavuudesta.\n\nKokenut osaaja taas voi tuoda yritykselle suurempia tuloja nopeammin, mutta on kalliimpi palkattava.'} title={'Arvioi budjetti rekrytoinille:'}/>
                 <Buttons nextButton='/forms/2' prevButton='/'/>
                 <Explanation/>
             </div>

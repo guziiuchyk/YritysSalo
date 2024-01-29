@@ -233,7 +233,6 @@ button{
 }
 
 .form-buttons div {
-  z-index: 2;
   font-size: 20px;
   font-weight: 700;
 }
@@ -247,8 +246,6 @@ button{
   background-color: #4d82aa;
   clip-path: polygon(0 0, 100% 50%, 0 100%);
   transform: translateY(-50%);
-  z-index: 1;
-
 }
 .form-buttons__left-arrow {
   position: absolute;
@@ -259,7 +256,6 @@ button{
   background-color: #4d82aa;
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
   transform: translateY(-50%);
-  z-index: 1;
 }
 .form-buttons-wrapper{
   display: flex;
@@ -336,6 +332,7 @@ button{
   justify-content: center;
   align-items: center;
   margin: 0 5px 0 0;
+  cursor: pointer;
 }
 .check-box__radio-custom span{
   background-color: white;
@@ -381,4 +378,80 @@ button{
   font-size: 20px;
   color: #4d82aa;
   margin: 20px 0 30px 0;
+}
+.form__popular-place__title{
+  color: #868686;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.form__popular-place__link{
+  color: #4d82aa;
+  font-size: 20px;
+  font-weight: 600;
+}
+.form__popular-place__link:nth-child(2){
+  margin: 0 15px;
+}
+.form__line{
+  width: 100%;
+  margin: 25px 0;
+  background-color: #d3d3d3;
+  height: 1px;
+}
+.react-select__menu{
+  top: -8px !important;
+}
+.react-select__control{
+  border: 1px solid #868686 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
+.react-select__indicator-separator{
+  display: none;
+}
+.react-select__option--is-focused{
+  background-color: #e3e3e3 !important;
+  cursor: pointer !important;
+}
+.react-select__option--is-selected {
+  background-color: #4d82aa !important;
+}
+.react-select__menu-list{
+  padding: 0 !important;
+  border-radius: 5px !important;
+  border: 1px solid #868686 !important;
+  font-size: 18px !important;
+  color: #575757 !important;
+}
+.react-select__value-container{
+  font-size: 18px !important;
+  color: #575757 !important;
+}
+.react-select__single-value{
+  color: #575757 !important;
+}
+.react-select__title{
+  color: #868686;
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+.react-select-wrapper{
+  margin: 20px 0;
+}
+.form2__date-pick__arrow{
+  height: 26px;
+  margin: 0 5px;
+  width: 40px;
+}
+.form2__date-picker{
+  display: flex;
+  margin: 20px 0;
+}
+.form2__date-picker__title{
+  color: #868686;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.react-date-picker__wrapper{
+  border-radius: 4px;
 }

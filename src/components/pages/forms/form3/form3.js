@@ -4,12 +4,13 @@ import Buttons from "../formsComponents/buttons/buttons";
 import Explanation from "../../../explanation/explanation";
 import {useEffect, useRef} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {setLeftDistance, setRightDistance} from "../../../../redux/slices/globalSlice";
 import {getElementDistance} from "../../../../utils/getElementDistance";
 import Input from "../formsComponents/input/input";
 import {setInvitationInterview, setWhenAnswer, setWhenAvailable} from "../../../../redux/slices/form3Slice";
 import CheckBox from "../formsComponents/checkBox/checkBox";
 import CopyToClipboard from "../formsComponents/copyToClipboard/copyToClipboard";
+import 'react-date-picker/dist/DatePicker.css';
+import 'react-calendar/dist/Calendar.css';
 
 const Form3 = (props) => {
 
@@ -24,7 +25,7 @@ const Form3 = (props) => {
         return () => {
             window.removeEventListener('resize', ()=> getElementDistance(formRef, dispatch));
         };
-    }, []);
+    });
     return (
     <section className='form-section'>
         <Header title='HAKEMUSTEN KÄSITTELY'/>
