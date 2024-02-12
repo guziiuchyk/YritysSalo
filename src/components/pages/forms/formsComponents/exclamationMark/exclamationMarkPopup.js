@@ -1,8 +1,9 @@
 import {useState} from "react";
+import {useSelector} from "react-redux";
 
-const ExclamationMark = ({leftDistance, text}) => {
-
+const ExclamationMark = ({text}) => {
     const [isVisible, setIsVisible] = useState(false);
+    const leftDistance = useSelector(state => state.global.leftDistance);
     const refactoredText  = text.split(`\n`);
     function changeIsVisible(){
         setIsVisible(!isVisible)

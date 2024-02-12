@@ -1,7 +1,9 @@
 import {useState} from "react";
+import {useSelector} from "react-redux";
 
-const QuestionMark = ({rightDistance, text}) => {
+const QuestionMark = ({text}) => {
     const [isVisible, setIsVisible] = useState(false);
+    const rightDistance = useSelector(state => state.global.rightDistance);
     function changeIsVisible(){
         setIsVisible(!isVisible)
     }

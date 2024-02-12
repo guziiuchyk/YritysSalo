@@ -8,6 +8,7 @@ export const form2Slice = createSlice({
         manyJobsLocation:'',
         companyDescription:'',
         contractType:'',
+        workingTime:'',
         workingTimeStart:'',
         workingTimeEnd:'',
         workPosition:'',
@@ -60,6 +61,9 @@ export const form2Slice = createSlice({
         },
         setNotifierName: (state, action) => {
             state.notifierName = action.payload
+        },
+        setWorkingTime: (state, action) => {
+            state.workingTime = action.payload
         },
 
     }

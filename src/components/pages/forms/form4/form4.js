@@ -10,6 +10,8 @@ import {setInterviewPlan, setInterviewType} from "../../../../redux/slices/form4
 import SelectItem from "../formsComponents/selectItem/selectItem";
 import CheckBox from "../formsComponents/checkBox/checkBox";
 import CopyToClipboard from "../formsComponents/copyToClipboard/copyToClipboard";
+import QuestionMark from "../formsComponents/questionMark/questionMark";
+import ExclamationMark from "../formsComponents/exclamationMark/exclamationMarkPopup";
 
 const Form4 = () => {
     const formRef = useRef(null);
@@ -30,11 +32,15 @@ const Form4 = () => {
         <div className="form-wrapper">
             <div className="form" ref={formRef}>
                 <SelectItem elements={[
-                    {label:'Yksilöhaastattelu', value:'yksilöhaastattelu'},
-                    {label:'Ryhmähaastattelu', value:'ryhmähaastattelu'},
-                    {label:'Etähaastattelu', value:'etähaastattelu'}
+                    {label:'Yksilöhaastattelu', value:'Yksilöhaastattelu'},
+                    {label:'Ryhmähaastattelu', value:'Ryhmähaastattelu'},
+                    {label:'Etähaastattelu', value:'Etähaastattelu'}
                 ]} title={'Haastattelutyyppi:'} value={interviewType} reducer={setInterviewType}/>
-                <Input title={'Suunnittele haastattelurunko:'} value={interviewPlan} reducer={setInterviewPlan} exclamationMark={'Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaikka itse haastattelut kulkisivat eri tavoilla.'} questionMark={'Kehitä kysymyksiä, jotka luovat keskustelua. (Vältä kyllä ja ei vastauksia.)\n\nVoit kopioida esimerkkivastauksen itsellesi.'}/>
+                <div>
+                    <QuestionMark text={'Kehitä kysymyksiä, jotka luovat keskustelua. (Vältä kyllä ja ei vastauksia.)\n\nVoit kopioida esimerkkivastauksen itsellesi.'}/>
+                    <ExclamationMark text={'Päätä tärkeimmät kysymykset, jotka tulee kysyttyä jokaiselta, vaikka itse haastattelut kulkisivat eri tavoilla.'}/>
+                    <Input title={'Suunnittele haastattelurunko:'} value={interviewPlan} reducer={setInterviewPlan}/>
+                </div>
                 <CheckBox isRequired={false} elements={[{
                     name:'Esimerkki kysymyksiä:',
                     element:<CopyToClipboard text={'Miten kuvailisit itseäsi, entä miten muut kuvailisivat sinua?\nMiksi haet tätä työpaikkaa?\nMinkälainen on mielestäsi hyvä työympäristö?\nMitä haluaisit kehittää itsessäsi?\nMikä on suurin saavutuksesi?'}/>
